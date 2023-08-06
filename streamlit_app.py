@@ -111,13 +111,13 @@ def scraper():
     mime='text/csv',
     )
 
-
-st.title('SEARCHPEOPLE FREE SCRAPER')
+st.title('The Right-Hand Task Force')
+st.title('SEARCH PEOPLE')
 st.caption('This web app will compare names scraped from legacy.com with searchpeoplefree.com')
 st.caption('Upload file that was scraped directly from the legacy.com, any modification to the csv file can cause an error in this web app')
 api = st.text_input('Your scrapingdog api key', placeholder='621b03gths82760235d2259d0')
-keyword = st.text_input('The state', placeholder= 'MD')
-uploaded_file = st.file_uploader("Choose a file")
+keyword = st.text_input('Your Country', placeholder= 'Bangladesh')
+uploaded_file = st.file_uploader("Upload a file")
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     fn = df['First Name'].to_list()
